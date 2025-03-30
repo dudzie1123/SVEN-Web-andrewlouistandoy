@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SubmitBookingModel;
+use App\Models\Booking;
 
 class HomeController extends Controller
 {
@@ -34,7 +34,7 @@ class HomeController extends Controller
         $time = $request->input('time');
         $selectedTime = implode(', ', $time);
 
-        $data = new SubmitBookingModel();
+        $data = new Booking();
         $data->booking_date = $date;
         $data->note = $note;
         $data->booking_days = $selectedDays;
